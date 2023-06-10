@@ -38,7 +38,7 @@ class HomeViewModel : ObservableObject{ /* 571 */
             
             do{ /* 571 */
                 let coins = try JSONDecoder().decode([Coin].self, from: data) /* 571 */
-//                print("DEBUg: lastUpated: \(coins.first?.lastUpdated)")
+//                print("DEBug: lastUpated: \(coins.first?.lastUpdated)")
 //                print("DEBUG: sparkline \(coins.first?.sparklineIn7D)")
                 DispatchQueue.main.async { /* 571 */
                     self.coins = coins /* 571 */
