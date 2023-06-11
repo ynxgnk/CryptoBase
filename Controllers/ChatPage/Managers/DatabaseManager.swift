@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore /* 582 */
+import FirebaseDatabase
 
 final class DatabaseManager { /* 582 */
     static let shared = DatabaseManager() /* 582 */
@@ -162,7 +163,7 @@ final class DatabaseManager { /* 582 */
                     return /* 582 */
                 }
                 
-
+                
                 var ref = data["profile_photo"] /* 582 */
                 let user = User(name: name, email: email, profilePictureRef: ref) /* 582 */
                 completion(user) /* 582 */
@@ -195,4 +196,9 @@ final class DatabaseManager { /* 582 */
             }
         }
     }
+    
+    
+    
+
+
 }

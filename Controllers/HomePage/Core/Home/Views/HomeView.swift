@@ -13,7 +13,7 @@ struct HomeView: View { /* 572 */
     @StateObject var viewModel = HomeViewModel() /* 572 */
     
     var body: some View { /* 572 */
-        NavigationView{ /* 572 */
+        NavigationView { /* 572 */
             ZStack { /* 572 */
                 ScrollView(.vertical, showsIndicators: false) { /* 572 */
 
@@ -28,11 +28,14 @@ struct HomeView: View { /* 572 */
                 if viewModel.isLoadingData{ /* 572 */
                     CustomLoadingIndicator() /* 572 */
                 }
+                    
             } //ZS
-
-            .navigationTitle("Live Prices") /* 572 */
+            .navigationTitle("Live Prices")
+            
         } //nav
+
     } //someView
+    
 } // homeV
 
 //struct HomeView_Previews: PreviewProvider {

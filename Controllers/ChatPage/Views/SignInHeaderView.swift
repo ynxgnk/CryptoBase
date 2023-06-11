@@ -21,7 +21,7 @@ class SignInHeaderView: UIView {
         label.textAlignment = .center /* 598 */
         label.numberOfLines = 0 /* 598 */
         label.font = .systemFont(ofSize: 20, weight: .medium) /* 598 */
-        label.text = "Explore millions of articles!" /* 598 */
+        label.text = "Explore millions of cryptos!" /* 598 */
         return label /* 598 */
     }()
     

@@ -8,13 +8,13 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { /* 589 add 2 protocols */
-
+    
     private let composeButton: UIButton = { /* 589 */
         let button = UIButton() /* 589 */
         button.backgroundColor = .systemBlue /* 589 */
         button.tintColor = .white /* 589 */
         button.setImage(UIImage(systemName: "square.and.pencil",
-                        withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium)),
+                                withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium)),
                         for: .normal) /* 589 */
         button.layer.cornerRadius = 30 /* 589 */
         button.layer.shadowColor = UIColor.label.cgColor /* 589 */
@@ -44,16 +44,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc private func handleNewPostAdded() { /* 589 */
-            // Refresh the posts by fetching all posts again
-            fetchAllPosts() /* 589 */
-        }
-
+        // Refresh the posts by fetching all posts again
+        fetchAllPosts() /* 589 */
+    }
+    
     override func viewDidLayoutSubviews() { /* 589 */
         super.viewDidLayoutSubviews() /* 589 */
         composeButton.frame = CGRect(x: view.frame.width - 88,
-                               y: view.frame.height - 88 - view.safeAreaInsets.bottom,
-                               width: 60,
-                               height: 60
+                                     y: view.frame.height - 88 - view.safeAreaInsets.bottom,
+                                     width: 60,
+                                     height: 60
         ) /* 589 */
         tableView.frame = view.bounds /* 589 */
     }
@@ -92,7 +92,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { /* 589 */
-        return 100 /* 589 */
+        return 200 /* 589 */
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { /* 589 */
@@ -105,10 +105,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             present(vc, animated: true, completion: nil) /* 589 */
             return /* 589 */
         }
-                
+        
         let vc = PostViewController(post: posts[indexPath.row]) /* 589 */
         vc.navigationItem.largeTitleDisplayMode = .never /* 589 */
         vc.title = "Post" /* 589 */
         navigationController?.pushViewController(vc, animated: true) /* 589 */
     }
 }
+    
+    
+
+

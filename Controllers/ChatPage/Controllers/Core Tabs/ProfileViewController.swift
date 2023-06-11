@@ -64,7 +64,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         name: String? = nil
     ) { /* 590 */ /* 590 add profilePhotoUrl, name */ /* 590 change to ...PhotoRef: String? */
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: view.width/1.5)) /* 590 */
-        headerView.backgroundColor = .systemBlue /* 590 */
+        headerView.backgroundColor = .systemGray /* 590 */
         headerView.isUserInteractionEnabled = true /* 590 */
         headerView.clipsToBounds = true /* 590 */
         tableView.tableHeaderView = headerView /* 590 */
@@ -221,7 +221,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { /* 590 */
-        return 100 /* 590 */
+        return 200 /* 590 */
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { /* 590 */
@@ -294,3 +294,5 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationBa
         }
     }
 }
+
+

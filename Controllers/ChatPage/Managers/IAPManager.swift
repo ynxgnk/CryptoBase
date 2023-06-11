@@ -52,8 +52,8 @@ final class IAPManager { /* 581 */
                 completion?(true) /* 581 */
             } else { /* 581 */
                 print("Got updated status of NOT subscribed") /* 581 */
-                UserDefaults.standard.set(false, forKey: "premium") /* 581 */
-                completion?(false) /* 581 */
+                UserDefaults.standard.set(false, forKey: "premium") /* 581 */ //tyt
+                completion?(false) /* 581 */ //tyt
             }
 //            print(entitlements) /* 581 */
         }

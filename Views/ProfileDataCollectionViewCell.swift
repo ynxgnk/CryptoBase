@@ -5,6 +5,8 @@
 //  Created by Nazar Kopeika on 04.06.2023.
 //
 
+/*
+
 import UIKit
 
 class ProfileDataCollectionViewCell: UICollectionViewCell {
@@ -92,3 +94,4 @@ class ProfileDataCollectionViewCell: UICollectionViewCell {
     
     
 }
+*/
