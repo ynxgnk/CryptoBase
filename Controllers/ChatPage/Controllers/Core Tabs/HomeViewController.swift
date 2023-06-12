@@ -5,6 +5,7 @@
 //  Created by Nazar Kopeika on 08.06.2023.
 //
 
+import FirebaseAuth
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { /* 589 add 2 protocols */
@@ -22,6 +23,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         button.layer.shadowRadius = 10 /* 589 */
         return button /* 589 */
     }()
+    
+    let currentEmail: String /* 605 */
+
+    init(currentEmail: String) { /* 605 */
+        self.currentEmail = currentEmail /* 605 */
+        super.init(nibName: nil, bundle: nil) /* 605 */
+    }
+    
+    required init?(coder: NSCoder) { /* 605 */
+        fatalError() /* 605 */
+    }
     
     private let tableView: UITableView = { /* 589 copy from 589 and paste */
         let tableView = UITableView() /* 589 */
@@ -87,7 +99,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PostPreviewTableViewCell.identifier, for: indexPath) as? PostPreviewTableViewCell else { /* 589 */
             fatalError() /* 589 */
         }
-        cell.configure(with: .init(title: post.title, imageUrl: post.headerImageUrl)) /* 589 */
+      
+//        cell.configure(with: .init(title: post.title, imageUrl: post.headerImageUrl, description: post.text, currentEmail: currentUserEmail ?? "nil")) /* 589 */ //tyt /* 605 */
+        cell.configure(with: .init(title: post.title, imageUrl: post.headerImageUrl, description: post.text, currentEmail: currentEmail))
         return cell /* 589 */
     }
     
@@ -106,7 +120,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             return /* 589 */
         }
         
-        let vc = PostViewController(post: posts[indexPath.row]) /* 589 */
+        let vc = PostViewController(post: posts[indexPath.row], currentEmail: currentEmail) /* 589 */
         vc.navigationItem.largeTitleDisplayMode = .never /* 589 */
         vc.title = "Post" /* 589 */
         navigationController?.pushViewController(vc, animated: true) /* 589 */

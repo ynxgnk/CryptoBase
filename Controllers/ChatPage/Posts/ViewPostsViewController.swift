@@ -11,11 +11,15 @@ class PostViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     private let post: BlogPost /* 592 */
     private let isOwnedByCurrentUser: Bool /* 592 */
+    private let currentEmail: String /* 606 ostavb */
+
     
-    init(post: BlogPost, isOwnedByCurrentUser: Bool = false) { /* 592 */ /* 592 add isOwned */
+    init(post: BlogPost, isOwnedByCurrentUser: Bool = true, currentEmail: String) { /* 592 */ /* 592 add isOwned */ /* 606 */
         self.post = post /* 592 */
         self.isOwnedByCurrentUser = isOwnedByCurrentUser /* 592 */
+        self.currentEmail = currentEmail /* 606 */
         super.init(nibName: nil, bundle: nil) /* 592 */
+
     }
     
     required init?(coder: NSCoder) { /* 592 */
@@ -57,20 +61,27 @@ class PostViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { /* 592 */
-        return 3 // title, image, text /* 592 */
+        return 4 // title, image, text /* 592 */ /* 606 , nickname */
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { /* 592 */
         let index = indexPath.row /* 859204 */
         switch index { /* 592 */
         case 0: /* 592 */
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) /* 606 */
+            cell.selectionStyle = .none /* 606 */
+            cell.textLabel?.numberOfLines = 1 /* 606 */
+            cell.textLabel?.font = .systemFont(ofSize: 17, weight: .bold) /* 606 */
+            cell.textLabel?.text = currentEmail /* 606 */
+            return cell /* 606 */
+        case 1: /* 592 */
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) /* 592 */
             cell.selectionStyle = .none /* 592 */
             cell.textLabel?.numberOfLines = 0 /* 592 */
             cell.textLabel?.font = .systemFont(ofSize: 25, weight: .bold) /* 592 */
             cell.textLabel?.text = post.title /* 592 */
             return cell /* 592 */
-        case 1: /* 592 */
+        case 2: /* 592 */
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostHeaderTableViewCell.identifier,
                                                            for: indexPath) as? PostHeaderTableViewCell else { /* 592 */
                 fatalError() /* 592 */
@@ -78,12 +89,13 @@ class PostViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.selectionStyle = .none /* 592 */
             cell.configure(with: .init(imageUrl: post.headerImageUrl)) /* 592 */
             return cell /* 592 */
-        case 2: /* 592 */
+        case 3: /* 606 */
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) /* 592 */
             cell.selectionStyle = .none /* 592 */
             cell.textLabel?.numberOfLines = 0 /* 592 */
             cell.textLabel?.text = post.text /* 592 */
             return cell /* 592 */
+            
         default: /* 592 */
             fatalError() /* 592 */
         }
@@ -95,9 +107,9 @@ class PostViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case 0: /* 592 */
             return UITableView.automaticDimension /* 592 */
         case 1: /* 592 */
-            return 150 /* 592 */
-        case 2: /* 592 */
             return UITableView.automaticDimension /* 592 will automaticly size itself */
+        case 2: /* 592 */
+            return 300 /* 592 */
         default: /* 592 */
             return UITableView.automaticDimension /* 592 */
         }

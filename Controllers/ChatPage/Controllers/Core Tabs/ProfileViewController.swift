@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate { /* 590 add UITableViewDelegate and dataSource */
 
@@ -215,7 +216,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PostPreviewTableViewCell.identifier, for: indexPath) as? PostPreviewTableViewCell else { /* 590 */
             fatalError() /* 590 */
         }
-        cell.configure(with: .init(title: post.title, imageUrl: post.headerImageUrl)) /* 590 to create a viewModel */
+        cell.configure(with: .init(title: post.title, imageUrl: post.headerImageUrl, description: post.text, currentEmail: currentEmail)) /* 590 to create a  viewModel */ //tyt /* 605 */
 //        cell.textLabel?.text = post.title /* 590 */ /* 590 change "Blog post goes here" */
         return cell /* 590 */
     }
@@ -238,7 +239,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             if IAPManager.shared.canViewPost { /* 590 */
                 let vc = PostViewController(
                     post: posts[indexPath.row],
-                    isOwnedByCurrentUser: isOwnedByCurrentUser
+                    isOwnedByCurrentUser: isOwnedByCurrentUser,
+                    currentEmail: currentEmail
                 ) /* 590 copy from 590 and paste */
                 vc.navigationItem.largeTitleDisplayMode = .never /* 590 */
                 vc.title = "Post" /* 590 */
@@ -253,7 +255,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             // Our post
             let vc = PostViewController(
                 post: posts[indexPath.row],
-                isOwnedByCurrentUser: isOwnedByCurrentUser
+                isOwnedByCurrentUser: isOwnedByCurrentUser,
+                currentEmail: currentEmail
             ) /* 590 */ /* 590 add post */ /* 590 add isOwned */
     //        vc.title = posts[indexPath.row].title /* 590 */
             vc.navigationItem.largeTitleDisplayMode = .never /* 590 */

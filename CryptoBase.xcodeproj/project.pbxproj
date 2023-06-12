@@ -110,7 +110,7 @@
 		96F2298229437FE900D3574C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		96F52B3A29422674006DF1A0 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		9AB6CB2ABEB6C1127CAEFE14 /* Pods-swiftCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftCoin.release.xcconfig"; path = "Target Support Files/Pods-swiftCoin/Pods-swiftCoin.release.xcconfig"; sourceTree = "<group>"; };
-		BA61BC1E2A31C163005385D8 /* swiftCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA61BC1E2A31C163005385D8 /* CryptoBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7C33482A31B06200385B6E /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		BA7C334A2A31B06B00385B6E /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		BA7C334C2A31B07600385B6E /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 				BABD7D482A30940100A2EBA0 /* Other */,
 				B260551AADD8D8E892F75C4D /* Pods */,
 				48F657F9CD4FC4880A4A5E0D /* Frameworks */,
-				BA61BC1E2A31C163005385D8 /* swiftCoin.app */,
+				BA61BC1E2A31C163005385D8 /* CryptoBase.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -535,9 +535,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96E7DAE129358F0300E310EA /* swiftCoin */ = {
+		96E7DAE129358F0300E310EA /* CryptoBase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96E7DAF029358F0500E310EA /* Build configuration list for PBXNativeTarget "swiftCoin" */;
+			buildConfigurationList = 96E7DAF029358F0500E310EA /* Build configuration list for PBXNativeTarget "CryptoBase" */;
 			buildPhases = (
 				C511A664B9583FDF40893507 /* [CP] Check Pods Manifest.lock */,
 				96E7DADE29358F0300E310EA /* Sources */,
@@ -549,12 +549,12 @@
 			);
 			dependencies = (
 			);
-			name = swiftCoin;
+			name = CryptoBase;
 			packageProductDependencies = (
 				BABD7CCB2A3087DC00A2EBA0 /* Kingfisher */,
 			);
 			productName = swiftCoin;
-			productReference = BA61BC1E2A31C163005385D8 /* swiftCoin.app */;
+			productReference = BA61BC1E2A31C163005385D8 /* CryptoBase.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -591,7 +591,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96E7DAE129358F0300E310EA /* swiftCoin */,
+				96E7DAE129358F0300E310EA /* CryptoBase */,
 			);
 		};
 /* End PBXProject section */
@@ -918,7 +918,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96E7DAF029358F0500E310EA /* Build configuration list for PBXNativeTarget "swiftCoin" */ = {
+		96E7DAF029358F0500E310EA /* Build configuration list for PBXNativeTarget "CryptoBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E7DAF129358F0500E310EA /* Debug */,

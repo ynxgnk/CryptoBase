@@ -15,6 +15,7 @@ class CreateNewPostViewController: UIViewController {
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 50)) /* 593 */
         field.leftViewMode = .always /* 593 */
         field.placeholder = "Enter Title..." /* 593 */
+        field.layer.cornerRadius = 8 /* 606 */
         field.autocapitalizationType = .words /* 593 */
         field.autocorrectionType = .no /* 593 */
         field.backgroundColor = .secondarySystemBackground /* 593 */
@@ -38,6 +39,7 @@ class CreateNewPostViewController: UIViewController {
         let textView = UITextView() /* 593 */
         textView.backgroundColor = .secondarySystemBackground /* 593 */
         textView.autocorrectionType = .no /* 593 */
+        textView.layer.cornerRadius = 8 /* 606 */
         textView.isEditable = true /* 593 */
         textView.font = .systemFont(ofSize: 28) /* 593 */
         return textView /* 593 */
@@ -61,7 +63,7 @@ class CreateNewPostViewController: UIViewController {
         super.viewDidLayoutSubviews() /* 593 */
         
         titleField.frame = CGRect(x: 10, y: view.safeAreaInsets.top, width: view.width-20, height: 50) /* 593 */
-        headerImageView.frame = CGRect(x: 0, y: titleField.bottom+5, width: view.width, height: 160) /* 593 */
+        headerImageView.frame = CGRect(x: 0, y: titleField.bottom+5, width: view.width, height: 300) /* 593 */
         textView.frame = CGRect(x: 10, y: headerImageView.bottom+10, width: view.width-20, height: view.height-210-view.safeAreaInsets.top) /* 593 */
     }
     

@@ -92,7 +92,7 @@ class TabBarViewController: UITabBarController { /* 561 */
         
         let homeVC = UINavigationController(rootViewController: hostingController) /* 561 */
         let newsVC = UINavigationController(rootViewController: NewsViewController()) /* 561 */
-        let chatVC = UINavigationController(rootViewController: HomeViewController()) /* 561 */
+        let chatVC = UINavigationController(rootViewController: HomeViewController(currentEmail: currentUserEmail)) /* 561 */ /* 605 */
         let profileVC = UINavigationController(rootViewController: ProfileViewController(currentEmail: currentUserEmail)) /* 561 */
                 
         homeVC.navigationItem.largeTitleDisplayMode = .always /* 561 */

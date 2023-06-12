@@ -10,85 +10,85 @@
 import UIKit
 
 class ProfileDataCollectionViewCell: UICollectionViewCell {
-    static let identifier = "ProfileDataCollectionViewCell" /* 591 */
+    static let identifier = "ProfileDataCollectionViewCell" /*  */
     
-    private let nameLabel: UILabel = { /* 565 */
-        let label = UILabel() /* 566 */
+    private let nameLabel: UILabel = { /*  */
+        let label = UILabel() /*  */
         //        label.backgroundColor = .purple
-        label.text = "Name" /* 567 */
-        label.font = .systemFont(ofSize: 18, weight: .medium) /* 568 */
-        label.numberOfLines = 1 /* 569 */
-        return label /* 571 */
+        label.text = "Name" /*  */
+        label.font = .systemFont(ofSize: 18, weight: .medium) /*  */
+        label.numberOfLines = 1 /*  */
+        return label /*  */
     }()
     
-    private let emailLabel: UILabel = { /* 612 */
-        let label = UILabel() /* 613 */
+    private let emailLabel: UILabel = { /*  */
+        let label = UILabel() /*  */
         //        label.backgroundColor = .purple
-        label.text = "Email" /* 614 */
-        label.font = .systemFont(ofSize: 18, weight: .medium) /* 615 */
-        label.numberOfLines = 1 /* 616 */
-        return label /* 617 */
+        label.text = "Email" /*  */
+        label.font = .systemFont(ofSize: 18, weight: .medium) /*  */
+        label.numberOfLines = 1 /*  */
+        return label /*  */
     }()
     
-    private let profileImage: UIImageView = { /* 592 */
-        let imageView = UIImageView() /* 593 */
-        imageView.contentMode = .scaleAspectFit /* 594 */
+    private let profileImage: UIImageView = { /*  */
+        let imageView = UIImageView() /*  */
+        imageView.contentMode = .scaleAspectFit /*  */
         //        imageView.backgroundColor = .systemIndigo
-        imageView.layer.cornerRadius = 10 /* 595 */
-        imageView.layer.borderWidth = 1 /* 596 */
-        imageView.layer.borderColor = UIColor.secondarySystemBackground.cgColor /* 597 */
-        imageView.image = UIImage(systemName: "person") /* 598 */
-        return imageView /* 599 */
+        imageView.layer.cornerRadius = 10 /*  */
+        imageView.layer.borderWidth = 1 /*  */
+        imageView.layer.borderColor = UIColor.secondarySystemBackground.cgColor /*  */
+        imageView.image = UIImage(systemName: "person") /*  */
+        return imageView /*  */
     }()
     
-    private let isPremiumLabel: UILabel = { /* 600 */
-        let label = UILabel() /* 600 */
+    private let isPremiumLabel: UILabel = { /*  */
+        let label = UILabel() /*  */
         //        label.backgroundColor = .yellow
-        label.numberOfLines = 1 /* 600 */
-        label.font = .systemFont(ofSize: 15, weight: .regular) /* 600 */
-        label.text = "Basic" /* 600 */
-        return label /* 600 */
+        label.numberOfLines = 1 /*  */
+        label.font = .systemFont(ofSize: 15, weight: .regular) /*  */
+        label.text = "Basic" /*  */
+        return label /*  */
     }()
     
-    private let isPremiumImage: UIImageView = { /* 601 */
-        let imageView = UIImageView() /* 601 */
+    private let isPremiumImage: UIImageView = { /*  */
+        let imageView = UIImageView() /*  */
         //        imageView.backgroundColor = .systemMint
-        imageView.image = UIImage(systemName: "car") /* 601 */
-        imageView.layer.cornerRadius = 15 /* 601 */
-        imageView.contentMode = .scaleAspectFit /* 601 */
-        return imageView /* 601 */
+        imageView.image = UIImage(systemName: "car") /*  */
+        imageView.layer.cornerRadius = 15 /*  */
+        imageView.contentMode = .scaleAspectFit /*  */
+        return imageView /*  */
     }()
     
-    override init(frame: CGRect) { /* 602 */
-        super.init(frame: frame) /* 602 */
-        contentView.addSubview(nameLabel) /* 585 */
-        contentView.addSubview(profileImage) /* 603 */
-        contentView.addSubview(emailLabel) /* 603 */
-        contentView.addSubview(isPremiumImage)  /* 603 */
-        contentView.addSubview(isPremiumLabel) /* 603 */
+    override init(frame: CGRect) { /*  */
+        super.init(frame: frame) /*  */
+        contentView.addSubview(nameLabel) /*  */
+        contentView.addSubview(profileImage) /*  */
+        contentView.addSubview(emailLabel) /*  */
+        contentView.addSubview(isPremiumImage)  /*  */
+        contentView.addSubview(isPremiumLabel) /*  */
     }
     
-    required init?(coder: NSCoder) { /* 604 */
-        fatalError() /* 604 */
+    required init?(coder: NSCoder) { /*  */
+        fatalError() /*  */
     }
     
-    override func layoutSubviews() { /* 606 */
+    override func layoutSubviews() { /*  */
         super.layoutSubviews()
         
-        profileImage.frame = CGRect(x: 10, y: 50, width: 110, height: 110) /* 607 */
-        profileImage.backgroundColor = .blue /* 608 */
+        profileImage.frame = CGRect(x: 10, y: 50, width: 110, height: 110) /*  */
+        profileImage.backgroundColor = .blue /*  */
         
-        nameLabel.backgroundColor = .systemGreen /* 586 */
-        nameLabel.frame = CGRect(x: 130, y: 50, width: 200, height: 30) /* 586 */
+        nameLabel.backgroundColor = .systemGreen /*  */
+        nameLabel.frame = CGRect(x: 130, y: 50, width: 200, height: 30) /*  */
         
-        emailLabel.backgroundColor = .blue /* 609 */
-        emailLabel.frame = CGRect(x: 130, y: 90, width: 200, height: 30) /* 609 */
+        emailLabel.backgroundColor = .blue /*  */
+        emailLabel.frame = CGRect(x: 130, y: 90, width: 200, height: 30) /*  */
         
-        isPremiumLabel.frame = CGRect(x: 130, y: 130, width: 70, height: 30) /* 610 */
-        isPremiumLabel.backgroundColor = .systemBrown /* 610 */
+        isPremiumLabel.frame = CGRect(x: 130, y: 130, width: 70, height: 30) /*  */
+        isPremiumLabel.backgroundColor = .systemBrown /*  */
         
-        isPremiumImage.frame = CGRect(x: 200, y: 130, width: 30, height: 30) /* 611 */
-        isPremiumImage.backgroundColor = .purple /* 611 */
+        isPremiumImage.frame = CGRect(x: 200, y: 130, width: 30, height: 30) /*  */
+        isPremiumImage.backgroundColor = .purple /*  */
         
     }
     
