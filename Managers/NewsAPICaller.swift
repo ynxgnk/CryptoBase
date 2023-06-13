@@ -36,7 +36,7 @@ final class NewsAPICaller { /* 147 */
                 do { /* 169 */
                     let result = try JSONDecoder().decode(NewsAPIResponse.self, from: data) /* 170 */
                      
-                    print("Articles: \(result.articles.count)") /* 171 */
+//                    print("Articles: \(result.articles.count)") /* 171 */
                     completion(.success(result.articles)) /* 172 */
                 }
                 catch { /* 173 */

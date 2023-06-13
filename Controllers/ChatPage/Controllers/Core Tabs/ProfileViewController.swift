@@ -216,7 +216,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PostPreviewTableViewCell.identifier, for: indexPath) as? PostPreviewTableViewCell else { /* 590 */
             fatalError() /* 590 */
         }
-        cell.configure(with: .init(title: post.title, imageUrl: post.headerImageUrl, description: post.text, currentEmail: currentEmail)) /* 590 to create a  viewModel */ //tyt /* 605 */
+        cell.configure(with: .init(title: post.title, imageUrl: post.headerImageUrl, description: post.text, currentEmail: currentEmail)) /* 590 to create a  viewModel */  /* 605 */
 //        cell.textLabel?.text = post.title /* 590 */ /* 590 change "Blog post goes here" */
         return cell /* 590 */
     }

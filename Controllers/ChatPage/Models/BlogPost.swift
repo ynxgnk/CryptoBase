@@ -13,10 +13,10 @@ struct BlogPost { /* 600 */
     let timestamp: TimeInterval /* 600 */
     let headerImageUrl: URL? /* 600 */
     let text: String /* 600 */
-    
+
 }
 
-struct ExtendedBlogPost { /* 606 */
-    let blogPost: BlogPost
-    let creatorEmail: String
-}
+//struct ExtendedBlogPost { /* 606 */
+//    let blogPost: BlogPost
+//    let creatorEmail: String
+//}

@@ -5,6 +5,8 @@
 //  Created by Nazar Kopeika on 08.06.2023.
 //
 
+
+
 import FirebaseAuth
 import UIKit
 
@@ -44,6 +46,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Posts"
         view.backgroundColor = .systemBackground /* 589 */
         view.addSubview(tableView) /* 589 */ /* 589 */
         view.addSubview(composeButton) /* 589 */
@@ -99,8 +102,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PostPreviewTableViewCell.identifier, for: indexPath) as? PostPreviewTableViewCell else { /* 589 */
             fatalError() /* 589 */
         }
-      
-//        cell.configure(with: .init(title: post.title, imageUrl: post.headerImageUrl, description: post.text, currentEmail: currentUserEmail ?? "nil")) /* 589 */ //tyt /* 605 */
+    
         cell.configure(with: .init(title: post.title, imageUrl: post.headerImageUrl, description: post.text, currentEmail: currentEmail))
         return cell /* 589 */
     }
@@ -128,5 +130,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 }
     
     
+
 
 
