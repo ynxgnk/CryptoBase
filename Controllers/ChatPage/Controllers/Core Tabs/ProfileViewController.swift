@@ -99,6 +99,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         emailLable.textColor = .white /* 590 */
         emailLable.font = .systemFont(ofSize: 25, weight: .bold) /* 590 */
         
+        //Settings
+        let settingsButton = UIButton() /* 607 */
+        settingsButton.setImage(UIImage(systemName: "gear"), for: .normal) /* 607 */
+        settingsButton.frame = CGRect(x: profilePhoto.right+60, y: -62 , width: 150, height: 150) /* 607 */
+        settingsButton.addTarget(self, action: #selector(didTapSettings), for: .touchUpInside) /* 607 */
+        headerView.addSubview(settingsButton) /* 607 */
+        
         //Name
         if let name = name { /* 590 */
             title = name /* 590 */
@@ -123,6 +130,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 task.resume() /* 590 */
             }
         }
+    }
+    
+    @objc private func didTapSettings() { /* 607 */
+        let vc = SettingsViewController() /* 607 */
+        navigationController?.pushViewController(vc, animated: true) /* 607 */
     }
     
     @objc private func didTapProfilePhoto() { /* 590 */

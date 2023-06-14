@@ -5,7 +5,7 @@
 //  Created by Nazar Kopeika on 08.06.2023.
 //
 
-
+    
 
 import FirebaseAuth
 import UIKit
@@ -121,7 +121,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             present(vc, animated: true, completion: nil) /* 589 */
             return /* 589 */
         }
-        
         let vc = PostViewController(post: posts[indexPath.row], currentEmail: currentEmail) /* 589 */
         vc.navigationItem.largeTitleDisplayMode = .never /* 589 */
         vc.title = "Post" /* 589 */

@@ -5,6 +5,7 @@
 //  Created by Nazar Kopeika on 08.06.2023.
 //
 
+import FirebaseAuth
 import UIKit
 
 class PostPreviewTableViewCellViewModel { /* 594 */
@@ -29,7 +30,7 @@ class PostPreviewTableViewCell: UITableViewCell {
         let imageView = UIImageView() /* 594 */
         imageView.layer.masksToBounds = true /* 594 */
         imageView.clipsToBounds = true /* 594 */
-//        imageView.layer.cornerRadius = 8 /* 594 */
+        //        imageView.layer.cornerRadius = 8 /* 594 */
         imageView.contentMode = .scaleAspectFill /* 594 */
         return imageView /* 594 */
     }()
@@ -49,7 +50,7 @@ class PostPreviewTableViewCell: UITableViewCell {
     }()
     
     public let nicknameLabel: UILabel = { /* 605 */
-       let label = UILabel() /* 605 */
+        let label = UILabel() /* 605 */
         label.numberOfLines = 1 /* 605 */
         label.font = .systemFont(ofSize: 15, weight: .semibold) /* 605 */
         return label /* 605 */
@@ -70,28 +71,28 @@ class PostPreviewTableViewCell: UITableViewCell {
     
     override func layoutSubviews() { /* 594 */
         super.layoutSubviews() /* 594 */
-//        postImageView.backgroundColor = .blue
+        //        postImageView.backgroundColor = .blue
         postImageView.frame = CGRect(
             x: 10,
             y: 40,
             width: contentView.height-50,
             height: contentView.height-50
         ) /* 594 */
-//        postTitleLabel.backgroundColor = .orange
+        //        postTitleLabel.backgroundColor = .orange
         postTitleLabel.frame = CGRect(
             x: postImageView.right+10,
             y: 40,
             width: contentView.width-5-separatorInset.left-postImageView.width,
             height: 40
         ) /* 594 */
-//        postDescriptionLabel.backgroundColor = .red
+        //        postDescriptionLabel.backgroundColor = .red
         postDescriptionLabel.frame = CGRect(
             x: postImageView.right + 10,
             y: postTitleLabel.bottom+5,
             width: contentView.width-5-separatorInset.left-postImageView.width,
             height: contentView.height-50-separatorInset.bottom-45
         ) /* 605 */
-//        nicknameLabel.backgroundColor = .brown
+        //        nicknameLabel.backgroundColor = .brown
         nicknameLabel.frame = CGRect(
             x: 10,
             y: 5,
@@ -108,9 +109,11 @@ class PostPreviewTableViewCell: UITableViewCell {
         nicknameLabel.text = nil /* 605 */
     }
     
+    
+    
     func configure(with viewModel: PostPreviewTableViewCellViewModel) { /* 594 */ /* 594 change String */
         postTitleLabel.text = viewModel.title /* 594 */
-        postDescriptionLabel.text = viewModel.description /* 605 */ 
+        postDescriptionLabel.text = viewModel.description /* 605 */
         nicknameLabel.text = viewModel.currentEmail /* 605 */
         
         if let data = viewModel.imageData { /* 594 */
@@ -131,5 +134,7 @@ class PostPreviewTableViewCell: UITableViewCell {
             task.resume() /* 594 */
         }
     }
-
+    
 }
+
+

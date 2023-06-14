@@ -15,8 +15,3 @@ struct BlogPost { /* 600 */
     let text: String /* 600 */
 
 }
-
-//struct ExtendedBlogPost { /* 606 */
-//    let blogPost: BlogPost
-//    let creatorEmail: String
-//}
