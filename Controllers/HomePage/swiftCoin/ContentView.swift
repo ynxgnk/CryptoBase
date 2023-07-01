@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 28/11/22.
+//  Created by Nazar Kopeika on 28/11/22.
 //
 
 import SwiftUI

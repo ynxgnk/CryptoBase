@@ -5,7 +5,7 @@
 //  Created by Nazar Kopeika on 04.06.2023.
 //
 
-
+/*
 
 import Foundation
 
@@ -82,6 +82,8 @@ final class CryptoAPICaller {
         
         task.resume() /* 424 */
     }
+ 
+ 
     
 //        public func searchCrypto(with query: String, completion: @escaping (Result<[Crypto], Error>) -> Void) { /* 503 */
 //            guard !query.trimmingCharacters(in: .whitespaces).isEmpty else { /* 504 */
@@ -117,3 +119,4 @@ final class CryptoAPICaller {
     
 }
 
+*/

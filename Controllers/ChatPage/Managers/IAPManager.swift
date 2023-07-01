@@ -143,7 +143,7 @@ extension IAPManager { /* 581 */
             return true /* 581 */
         }
         guard let date = postEligibleViewDate else { /* 581 */
-            return true /* 581 */
+            return false /* 581 */
         }
         UserDefaults.standard.set(0, forKey: "post_views") /* 581 */
         return Date() >= date /* 581 */

@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 28/11/22.
+//  Created by Nazar Kopeika on 28/11/22.
 //
 
 
@@ -30,7 +30,7 @@ struct HomeView: View { /* 572 */
                 }
                     
             } //ZS
-            .navigationTitle("Live Prices")
+//            .navigationTitle("Live Prices")
             
         } //nav
 

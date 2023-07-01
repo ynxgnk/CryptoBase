@@ -2,7 +2,7 @@
 //  StatisticView.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 12/12/22.
+//  Created by Nazar Kopeika on 12/12/22.
 //
 
 import SwiftUI

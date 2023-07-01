@@ -2,7 +2,7 @@
 //  LazyNavigationView.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 20/12/22.
+//  Created by Nazar Kopeika on 20/12/22.
 //
 
 import Foundation

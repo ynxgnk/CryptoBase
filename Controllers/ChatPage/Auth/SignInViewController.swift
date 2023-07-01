@@ -73,14 +73,6 @@ class SignInViewController: UIViewController {
         
         signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside) /* 591 */
         createAccountButton.addTarget(self, action: #selector(didTapCreateAccount), for: .touchUpInside) /* 591 */
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now()+3) { /* 591 */
-//            if !IAPManager.shared.isPremium() { /* 591 */
-//                let vc = PayWallViewController() /* 591 */
-//                let navVC = UINavigationController(rootViewController: vc) /* 591 */
-//                self.present(navVC, animated: true, completion: nil) /* 591 */
-//            }
-//        }
     }
     
     override func viewDidLayoutSubviews() { /* 591 */

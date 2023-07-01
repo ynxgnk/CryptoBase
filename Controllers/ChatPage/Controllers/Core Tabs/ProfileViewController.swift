@@ -29,8 +29,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let currentEmail: String /* 590 */
     
+//    let id: String
+    
     init(currentEmail: String) { /* 590 */
         self.currentEmail = currentEmail /* 590 */
+//        self.id = id
         super.init(nibName: nil, bundle: nil) /* 590 */
     }
     
@@ -43,7 +46,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         view.backgroundColor = .systemBackground /* 590 */
         setUpSignOutButton() /* 590 */
         setUpTable() /* 590 */
-        title = "Profile" /* 590 */
         fetchPosts() /* 590 */
     }
     
@@ -98,6 +100,18 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         emailLable.textAlignment = .center /* 590 */
         emailLable.textColor = .white /* 590 */
         emailLable.font = .systemFont(ofSize: 25, weight: .bold) /* 590 */
+        
+        //ID
+//        let idLabel = UILabel(frame: CGRect(
+//            x: 10,
+//            y: -62,
+//            width: 300,
+//            height: 300)
+//        )
+//        idLabel.text = "ID: \(id)"
+//        idLabel.textColor = .white
+//        idLabel.font = .systemFont(ofSize: 25, weight: .bold)
+//        headerView.addSubview(idLabel)
         
         //Settings
         let settingsButton = UIButton() /* 607 */

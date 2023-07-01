@@ -23,7 +23,7 @@ class NewsTableViewCell: UITableViewCell {
         imageView.layer.masksToBounds = true /* 189 */
         imageView.clipsToBounds = true /* 190 */
         imageView.backgroundColor = .secondarySystemBackground /* 191 */
-        imageView.contentMode = .scaleToFill /* 192 */
+        imageView.contentMode = .scaleAspectFill /* 192 */
 //        imageView.image = UIImage(systemName: "person") /* 44 */
         return imageView /* 43 */
     }()

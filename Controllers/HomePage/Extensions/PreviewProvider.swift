@@ -2,7 +2,7 @@
 //  PreviewProvider.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 13/12/22.
+//  Created by Nazar Kopeika on 13/12/22.
 //
 
 import Foundation

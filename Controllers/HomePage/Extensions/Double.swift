@@ -2,7 +2,7 @@
 //  Double.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 08/12/22.
+//  Created by Nazar Kopeika on 08/12/22.
 //
 
 import Foundation
@@ -24,7 +24,7 @@ extension Double{ /* 563 */
         let formatter = NumberFormatter() /* 563 */
         formatter.numberStyle = .decimal /* 563 */
         formatter.minimumFractionDigits = 2 // min and max digits /* 563 */
-        formatter.maximumFractionDigits = 4 /* 563 */
+        formatter.maximumFractionDigits = 2 /* 563 */
         return formatter /* 563 */
     }
     

@@ -2,7 +2,7 @@
 //  Color.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 09/12/22.
+//  Created by Nazar Kopeika on 09/12/22.
 //
 
 import Foundation

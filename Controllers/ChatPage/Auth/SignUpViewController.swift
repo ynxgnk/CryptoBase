@@ -60,6 +60,7 @@ class SignUpViewController: UIViewController {
         let button = UIButton() /* 591 */
         button.backgroundColor = .systemGreen /* 591 */
         button.setTitle("Create Account", for: .normal) /* 591 */
+        button.layer.cornerRadius = 8
         button.setTitleColor(.white, for: .normal) /* 591 */
         return button /* 591 */
     }()

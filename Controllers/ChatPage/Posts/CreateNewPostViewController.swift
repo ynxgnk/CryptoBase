@@ -5,7 +5,7 @@
 //  Created by Nazar Kopeika on 08.06.2023.
 //
 
-/*
+
 
 import UIKit
 
@@ -32,7 +32,7 @@ class CreateNewPostViewController: UIViewController {
         imageView.isUserInteractionEnabled = true /* 593 */
         imageView.clipsToBounds = true /* 593 */
         imageView.image = UIImage(systemName: "photo") /* 593 */
-        imageView.backgroundColor = .tertiarySystemBackground /* 593 */
+        imageView.backgroundColor = .systemBackground /* 593 */
         return imageView /* 593 */
     }()
     
@@ -180,7 +180,9 @@ extension CreateNewPostViewController: UIImagePickerControllerDelegate, UINaviga
     }
 }
 
-*/
+
+
+/*
 
 //
 //  CreateNewPostViewController.swift
@@ -357,3 +359,4 @@ extension CreateNewPostViewController: UIImagePickerControllerDelegate, UINaviga
         headerImageView.image = image
     }
 }
+*/

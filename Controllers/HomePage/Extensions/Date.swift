@@ -2,7 +2,7 @@
 //  Date.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 14/12/22.
+//  Created by Nazar Kopeika on 14/12/22.
 //
 
 import Foundation

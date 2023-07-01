@@ -2,7 +2,7 @@
 //  CoinRowView.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 29/11/22.
+//  Created by Nazar Kopeika on 29/11/22.
 //
 
 import SwiftUI

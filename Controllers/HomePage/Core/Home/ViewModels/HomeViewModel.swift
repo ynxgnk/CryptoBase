@@ -2,7 +2,7 @@
 //  HomeViewModel.swift
 //  swiftCoin
 //
-//  Created by Johel Zarco on 01/12/22.
+//  Created by Nazar Kopeika on 01/12/22.
 //
 
 import Foundation
